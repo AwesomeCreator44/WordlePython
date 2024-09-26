@@ -6,6 +6,9 @@ List of words came from: https://www.ef.co.uk/english-resources/english-vocabula
 
 First, the user chooses a number from 2-12, which will be the length of the words given to them.
 They can then choose the difficulty:
+  
   1 is easy - basically just normal wordle (unfinished)
-  2 is moderate - wordle but you only get told the number of letters in common which are both already in the correct places and which aren't as seperate counts (unfinished)
+  
+  2 is moderate - wordle but you only get told the number of letters in common which are both already in the correct places and aren't in the right place as seperate counts (unfinished)
+  
   3 is hard - wordle but you only get told the number of letters in common which are already in the correct places
