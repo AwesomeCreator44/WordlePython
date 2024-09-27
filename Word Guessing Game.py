@@ -72,40 +72,49 @@ while exit1 == False: #main code loop setup 2
         guess = "" #defines the guess variable
         attempts = 1 #defines attempts variable
         
-        if difficulty == 1: 
-            while correct == False: 
-                count = 0 
-                while len(guess) != length:
+        if difficulty == 1: #tells user exactly which letters are correct, in the correct place, or incorrect entirely
+            while correct == False: #game loop setup 4
+                count = 0 #defines count used for each letter
+                while len(guess) != length: #ensures the user enters a guess of the correct length
                     print("Enter a", length2, "letter word: ")
                     guess = input("")
-                for i in range(length):
-                    if guess[i] == word[i]:
-                        count += 1
+                for i in range(length): #creates loop to check each letter
+                    if guess[i] == word[i]: #checks guess letters with random word letters
+                        count += 1 #adds to count to see number of letters in common
                 if guess == word:
-                    print("You have guessed the word!")
-                    correct = True
+                    if attempts == 1:
+                        print("You have guessed the word! It only took one attempt!")
+                    else:
+                        print("You have guessed the word! It only took", attempts, "attempts.")
+                    correct = True #breaks loop
                 else:
                     print("Your guess has", count, "letter(s) in common with the word.")
                     guess = ""
-                    print(len(word))
+                    attempts += 1
             exit2 = int(input("Type 1 to get a new word or 2 to exit to menu: "))
             
-        elif difficulty == 2:
+        elif difficulty == 2: #includes two counts - one for letters in the right place and one for letters in the wrong place
             while correct == False:
                 count = 0
+                count2 = 0
                 while len(guess) != length:
                     print("Enter a", length2, "letter word: ")
                     guess = input("")
                 for i in range(length):
                     if guess[i] == word[i]:
                         count += 1
+                    if guess[i] in word: #loop to see how many letters in the guess are in the real word in total
+                        count2 += 1 #adds to count
                 if guess == word:
-                    print("You have guessed the word!")
-                    correct = True
+                    if attempts == 1:
+                        print("You have guessed the word! It only took one attempt!")
+                    else:
+                        print("You have guessed the word! It only took", attempts, "attempts.")
+                    correct = True #breaks loop
                 else:
-                    print("Your guess has", count, "letter(s) in common with the word.")
+                    print("Your guess has", count2, "letter(s) in common with the word, with", count, "in the correct position.")
                     guess = ""
-                    print(len(word))
+                    attempts += 1
             exit2 = int(input("Type 1 to get a new word or 2 to exit to menu: "))
             
         elif difficulty == 3: #checks game difficulty
@@ -124,7 +133,7 @@ while exit1 == False: #main code loop setup 2
                         print("You have guessed the word! It only took", attempts, "attempts.")
                     correct = True #breaks loop
                 else:
-                    print("Your guess has", count, "letter(s) in common with the word.")
+                    print("Your guess has", count, "letter(s) in the correct position.")
                     guess = ""
                     attempts += 1
             exit2 = int(input("Type 1 to get a new word or 2 to exit to menu: "))
