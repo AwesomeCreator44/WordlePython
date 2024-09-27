@@ -1,5 +1,5 @@
 # WordlePython
-Basically Wordle but on python. Work In Progress!
+Basically Wordle but in python
 
 Doesn't (currently) have a system for a different word each day like the actual wordle. Words are chosen at random and new words can be given as many times as you want.
 List of words came from: https://www.ef.co.uk/english-resources/english-vocabulary/top-1000-words/ (stored in the WordAll.txt file)
