@@ -17,6 +17,8 @@ They can then choose the difficulty:
 
 Future plans:
 
-  Finish normal and difficult gamemodes
+  Complete normal gamemode
 
   Create a tkinter interface for the game.
+
+  Add a way to save scores
